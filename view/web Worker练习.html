@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>web Worker练习</title>
+  <script src="../js/test.js"></script>
+	<script type="text/javascript">
+      //创建一个web页面主线程
+      var w;
+      // window.onload=function(){
+      // 	 if(typeof(Worker)!=="undefined"){
+      //         if(typeof(w)=="undefined"){
+      //               w=new Worker("worker.js")
+      //         }
+      // 	 }else{
+      // 	 	alert("你的浏览器不支持Worker");
+      // 	 }
+
+      // }
+
+      window.onload=function(){
+
+         
+      }
+       function showNum(){
+        // 检查浏览器是否支持Worker
+        if(typeof(Worker)!=="undefined"){
+           w=new Worker("worker.js");
+           w.onmessage=function(event){
+              var testP=document.getElementById("testPelem");
+              testP.innerHTML=event.data;
+           }   
+        }else{
+          alert("你的浏览器不支持Worker");
+        }
+      }
+      //关闭Worker进程,终止Worker,Worker一旦被终止,在页面中将无法再次启动
+      function closeW(){
+            
+            w.terminate();
+      }
+
+      //worker的作用
+      //可以加载一个JS进行大量的复杂计算而不挂起主进程,并通过postMessage,onmessage
+      
+      var test=new Test();
+      test.setName("Anle");
+      console.log(test.getName());
+      // Test.setName("Anle");
+      // console.log(Test.getName());
+     
+	</script>
+</head>
+<body>
+   <p id="testPelem"></p>
+	 <input type="button" value="开始" onclick="showNum()">
+   <input type="button" value="结束" onclick="closeW()">
+</body>
+</html>

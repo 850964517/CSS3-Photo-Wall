@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<!-- 
+		initial-scale:初始缩放比例,也就是页面第一次加载时候缩放的比例 
+	    maximum-sacle:允许用户缩放到最大比例,值得范围0.25到10.0之间
+	    minimum-scale:允许用户缩放到最小比例,值为0.25到10.0之间
+	    user-scalable:用户是否可以手动缩放
+    -->
+	<title>移动端适配规则</title>
+	<script>
+	//通过获取屏幕的宽度并去监听屏幕缩小放大事件来控制rem的参考值
+	window.onresize=r;
+	function r(resizeNum){
+        // 获取可视区域的宽度
+      var winW=window.innerWidth;
+      //适配核心代码
+      document.getElementsByTagName("html")[0].style.fontSize=winW*0.15625+"px";
+      //适配核心代码(window.screen.width用来获取-屏幕的分辨率)
+      if(winW>window.screen.width&&resizeNum<=10){
+          setTimeout(function(){
+          	r(++resizeNum);
+          },100); 
+      }else{
+      	document.getElementsByTagName("body")[0].style.opacity=1;
+      }
+	}
+	setTimeout(function(){r(0)},100);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

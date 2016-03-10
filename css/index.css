@@ -1,0 +1,68 @@
+.img_content_box{
+	width: 25%;
+	margin: 50px auto;
+	overflow: hidden;
+	transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
+    -o-transition:all 0.3s ease-in-out; /* Opera */
+}
+.img_content_box .img_box{
+	width: 150%;
+	transform-origin:0% 0%;
+	margin-bottom: 3%;
+	position:relative;
+	float: left;
+	overflow: hidden;
+    transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
+    -o-transition:all 0.3s ease-in-out; /* Opera */
+    transform-origin:0% 0%;
+    -moz-transform-origin:0% 0%;
+    -webkit-transform-origin:0% 0%;
+    -webkit-transform-origin:0% 0%;
+    -webkit-transform-origin:0% 0%;
+}
+.img_content_box .img_box img{
+	width: 100%;
+	 transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
+    -o-transition:all 0.3s ease-in-out; /* Opera */
+}
+.img_box{
+	position: relative;
+}
+.img_mask{
+     display: inline-block;
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     left: 0;
+     top:0;
+     background-color: #000;
+     opacity: 0.3;
+      transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
+    -o-transition:all 0.3s ease-in-out; /* Opera */
+}
+.tip_txt{
+	position: absolute;
+	top: 45%;
+	left: 30%;
+	z-index: 10;
+	color: #fff;
+	font-size: 16px;
+	  transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out; /* Firefox 4 */
+    -webkit-transition:all 0.3s ease-in-out; /* Safari and Chrome */
+    -o-transition:all 0.3s ease-in-out; /* Opera */
+}
+.one_column,.two_column{
+	width: 100%;
+}
+/*.two_column{
+	margin-left: 3%;
+}*/
