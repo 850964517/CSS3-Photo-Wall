@@ -18,10 +18,7 @@
 
       // }
 
-      window.onload=function(){
-
-         
-      }
+     
        function showNum(){
         // 检查浏览器是否支持Worker
         if(typeof(Worker)!=="undefined"){
@@ -50,10 +47,34 @@
       // console.log(Test.getName());
      
 	</script>
+  <style>
+     /*.mask{
+       background-color: #000;
+       opacity: 0.5;
+       position: fixed;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+     }*/
+     .mask{
+       background-color: #000;
+       opacity: 0.3;
+       position: absolute;
+       left: 0;
+       right: 0;
+       top: 0;
+       bottom:0;
+
+     }
+  </style>
 </head>
 <body>
    <p id="testPelem"></p>
 	 <input type="button" value="开始" onclick="showNum()">
    <input type="button" value="结束" onclick="closeW()">
+  <!--  <div class="mask">
+     
+   </div> -->
 </body>
 </html>
